@@ -1,0 +1,69 @@
+/* In here, is where we will write our CSS which adds design to our page */
+
+/* -------- */
+/* The first kind of selector is an Element selector */
+/* -------- */
+body {
+  background-color: darksalmon;
+}
+
+header {
+  background-color: azure;
+}
+
+/* We can select multiple elements at the same time */
+
+div,
+section {
+  /* We can use more than just the inbuilt colour names, we can use rgb, hexadecimal and so on. Click the coloured square when in VS code! */
+  background-color: #07edf9;
+}
+
+ol {
+  background-color: black;
+  color: white;
+}
+/* Don't have multiple rulesets targeting the same thing */
+/* you'll just get confused. */
+/* however, because this ruleset comes after the one before, it is the last to be applied, and so the previous CSS gets overwritten */
+ol {
+  color: red;
+}
+
+/* -------- */
+/* The second kind of selector we'll look at is a class selector */
+/* -------- */
+/* A CSS class starts with a full stop, and then has a name that YOU have defined: .my-css-class */
+
+.tree-facts-container {
+  padding: 20px;
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tree-facts {
+  color: rgb(172, 125, 64);
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* How to select an ID */
+#welcomeHeading {
+  color: chocolate;
+}
+
+/* How to make a fancy hover effect */
+li:hover {
+  border: yellow 5px solid;
+}
+
+/* How to select a descendant */
+div > h2 {
+  color: deeppink;
+}
+
+ol > li {
+  margin: 5px;
+  border: 2px solid pink;
+}

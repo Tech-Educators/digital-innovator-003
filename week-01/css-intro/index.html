@@ -4,6 +4,7 @@
     <!-- In this head element, I have my 'metadata' - my 'data about data' -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <!-- This 'title' tag lets me change the text in the tab -->
     <title>CSS Intro</title>
     <!-- Can you figure out how to change the icon?... -->
@@ -22,13 +23,13 @@
 
     <main>
       <div>
-        <h1>Welcome to my CSS Extravaganza</h1>
+        <h1 id="welcomeHeading">Welcome to my CSS Extravaganza</h1>
         <p>We love trees and we want to tell you about it!</p>
         <h2>All About Trees!</h2>
       </div>
 
-      <section>
-        <ul>
+      <section class="tree-facts-container">
+        <ul class="tree-facts">
           <li>Trees tend to have a trunk</li>
           <li>Trees generally have leaves, but not all of them</li>
           <li>Trees use photosynthesis for energy</li>
@@ -42,6 +43,8 @@
 
       <section>
         <h2>My favourite trees</h2>
+        <!-- The next line is called "inline styling". Don't do this, it makes extra frustration for you. but it is possible to do it. -->
+        <!-- <ol type="a" style="color: purple"> -->
         <ol type="a">
           <li>Birch</li>
           <li>Redwood</li>
