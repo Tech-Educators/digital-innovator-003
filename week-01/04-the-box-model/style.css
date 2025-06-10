@@ -1,0 +1,28 @@
+body {
+  background-color: gold;
+}
+
+.parent-container-box {
+  background-color: aquamarine;
+  width: 500px;
+  height: 500px;
+}
+
+.child-box {
+  background-color: red;
+  width: 75px;
+  height: 75px;
+
+  margin: 20px;
+
+  border: 10px solid blueviolet;
+
+  padding: 10px;
+}
+
+h2 {
+  background-color: aquamarine;
+  margin: 10px;
+  border: 10px solid lime;
+  padding: 10px;
+}
