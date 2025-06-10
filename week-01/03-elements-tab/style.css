@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.494);
+  color: white;
+  padding: 1rem;
+}
+
+nav > a {
+  padding-inline: 1rem;
+}
+
+body {
+  background-color: bisque;
+  padding: 1rem;
+}
+
+article {
+  background-color: aqua;
+  border: 2px solid tomato;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+img {
+  margin: auto;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+
+img:hover {
+  box-shadow: 25px 5px 5px black;
+}
+
+.alternate-article {
+  background-color: cornflowerblue;
+}
+
+/* CSS Text Gradient Generator: https://www.cssportal.com/css-text-gradient-generator/ */
+.fancy-text {
+  background: #ff0000;
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    #ff0000 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
