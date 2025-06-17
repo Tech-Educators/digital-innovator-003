@@ -32,3 +32,7 @@ const myBankBalance = 300000000000000000;
 
 // You can think of const as being short for 'constant'...
 myBankBalance = 40000000000000; // I can't do this, because 'myBankBalance' is a CONSTANT value. It will error!
+
+// can we use the same variable name for a let AND a const?
+// let tableDimension = 34
+// const tableDimension = 55 // we cant do this as it will error!
