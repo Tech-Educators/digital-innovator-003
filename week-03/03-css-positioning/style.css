@@ -1,0 +1,98 @@
+body {
+  background-color: blanchedalmond;
+}
+
+.visible-section {
+  background-color: aqua;
+  height: 400px;
+  margin-top: 10px;
+
+  /* the position:relative property, given to a parent, allows us to absolutely position a child within this container. */
+  position: relative;
+}
+
+/* this is my red heding in my first section container, that I'm going to position inside that container */
+.trees-heading {
+  margin: 0;
+  background-color: brown;
+  width: 100px;
+  /* height: 50px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* padding-block: 20px; */
+  /* padding-inline: 50px; */
+
+  /* ----------- */
+  /* Here's the magic! */
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+
+  text-align: center;
+  color: white;
+  /* we get strange behaviour if we use left AND right at the same time */
+  /* left: 30px; */
+}
+
+/* Here I target all of the <p> elements who are descendants of a visible-section class */
+.visible-section p {
+  /* 'position:absolute' lets us take an element OUT of the normal document flow */
+  /* It tells the element to be positioned in its next nearest relative */
+  /* By default, that will be the 'body', unless, one of its parents has got 'position:relative' */
+
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+.relative-div {
+  position: relative;
+  background-color: red;
+  width: 150px;
+  height: 200px;
+}
+
+/* --------- */
+/* Position Fixed */
+header {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  justify-content: space-between;
+  width: 98vw;
+
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.lower-button {
+  display: flex;
+  align-items: baseline;
+
+  position: fixed;
+  bottom: 0;
+
+  background-color: white;
+  border: 2px solid black;
+}
+
+/* --------- */
+/* Position Sticky */
+.sticky-heading {
+  background-color: coral;
+  padding: 10px;
+  position: sticky;
+  top: 150px;
+  z-index: 50;
+}
+
+/* position: relative
+position: absolute
+position: fixed
+position: sticky
+
+top: 10px
+bottom: 20px
+left: 30px
+right: 50px */
