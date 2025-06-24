@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(224, 176, 224);
-}
-
 img {
+  /* an image will only EVER take up 100% of it's PARENT container width. Never any more. */
   max-width: 100%;
   /* display:block allows our images to be displayed without that weird spacing */
   display: block;
+}
+
+/* It's up to you if you wish to keep this FABULOUS body colour: */
+body {
+  background-color: rgb(224, 176, 224);
 }
