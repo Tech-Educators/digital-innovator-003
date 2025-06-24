@@ -1,0 +1,16 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(224, 176, 224);
+}
+
+img {
+  max-width: 100%;
+  /* display:block allows our images to be displayed without that weird spacing */
+  display: block;
+}
