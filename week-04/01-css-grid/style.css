@@ -1,0 +1,77 @@
+body {
+  background-color: skyblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+.grid-container {
+  border: 2px solid purple;
+  height: 600px;
+
+  /* To make a container a GRID container, we use a simple property: */
+  display: grid;
+
+  /* I can be more explicit and tell thhe grid how many columns to have */
+  /* The following is how we can give 3 columns each with a fixed width of 100px */
+  /* grid-template-columns: 100px 100px 100px; */
+
+  /* We sometimes want the browser to do the work, so we can use 'fr' units - 'fractions' of the available space */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* To define rows I can use the following property */
+  /* I can also mix and match units! */
+  /* However, when I start to define LOTS of rows, this gets a bit unreadable */
+  /* grid-template-rows: 100px 100px 2fr 100px; */
+  grid-template-rows: repeat(6, 1fr);
+
+  gap: 10px;
+}
+
+.grid-container * {
+  border: 2px solid green;
+}
+
+header {
+  background-color: sandybrown;
+
+  /* grid-column tells the CHILD where to go */
+  /* We tell it the ' start-position / end-position ' */
+  /* We can be explicit: start at column 2, end at column 4 */
+  /* or we can say: cover everything with '1 / -1' */
+  grid-column: 1 / -1;
+}
+
+nav {
+  background-color: tomato;
+  grid-column: 2 / 4;
+}
+
+aside {
+  background-color: blueviolet;
+  grid-row: 2 / 6;
+}
+
+article {
+  background-color: chartreuse;
+  /* We can combine grid-row and grid-column properties to allow an element to take up more 'boxy' space */
+  grid-row: 4 / 6;
+  grid-column: 2 /4;
+}
+
+footer {
+  background-color: aquamarine;
+  grid-row: 6;
+  /* grid-column: 1 / -1; */
+  /* we can use the 'span' keyword to tell the browser to let this element 'span' this many columns. */
+  grid-column: 1 / span 3;
+}
+
+p {
+  background-color: white;
+  grid-column: span 2;
+}
