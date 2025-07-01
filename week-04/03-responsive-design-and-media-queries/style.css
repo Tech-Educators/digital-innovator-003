@@ -1,0 +1,66 @@
+body {
+  background-color: blanchedalmond;
+}
+
+.header {
+  background-color: rgb(33, 187, 135);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: medium;
+}
+
+.intro-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-content-container {
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content-box {
+  background-color: blueviolet;
+  height: 300px;
+  width: 300px;
+  border-radius: 5%;}
+
+/* The following styles inside tyhis media query will ONLY be applied IF the screen width is a value between 375px and 425px */
+
+@media (min-width: 375px) and (max-width: 425px) {
+    .header {
+    background-color: chocolate;
+    }
+    .parent-content-container {
+    background-color: rgb(14, 164, 114);
+    }
+}
+
+@media (min-width: 900px) {
+    .parent-content-container {
+        flex-direction: row;
+    }
+    .content-box{
+        height: 200px;
+        width: 200px;
+    }
+
+    .header {
+        font-size: 3rem;
+    }
+}
