@@ -7,15 +7,19 @@
 </head>
 <body>
     <h1>Image, audio and video elements!</h1>
-
+<p>Img sources can be a URL of a file that you have saved locally:</p>
     <img src="https://media.istockphoto.com/id/505602225/photo/helix-pomatia-burgundy-snail.jpg?s=612x612&w=is&k=20&c=LHJz9QEhs_1ggecXQTbE4U-4FZaKpefaW7C1O5qqikw=" alt="A lovely image of a garden snail on a green leaf.">
 
     <img src="./assets/istockphoto-505602225-612x612.jpg" alt="A lovely image of a garden snail on a green leaf.">
+<p>Dont forget alt text!</p>
 
+<p> gif files are images but they move like a video!</p>
     <img src="https://i.pinimg.com/originals/44/ca/23/44ca23fd3274c0ac67cc059b54564676.gif" alt="A gif image of a handsome green frog looking dramatic.">
 
+    <p>Audio elements are structured the same as image elements but we need to use the controls attribute to show the play/pause buttons. We can also loop the audio with the loop attribute!</p>
     <audio src="./assets/windows-tone.mp3" controls loop></audio>
 
+    <p>Videos are similar in structure to the other media elements. We have a few more attributes to play with here, like controls, width/height and we can even include a placeholder image that displays until the user plays the video! </p>
     <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls width="500" muted poster="./assets/bunny.jpeg"></video>
 
 </body>
