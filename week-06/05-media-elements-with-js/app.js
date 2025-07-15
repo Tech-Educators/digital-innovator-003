@@ -11,6 +11,7 @@ const playButton = document.getElementById("play-button");
 const pauseButton = document.getElementById("pause-button");
 const ffButton = document.getElementById("ff-button");
 const rwButton = document.getElementById("rw-button");
+const currentTimePTag = document.getElementById("current-time");
 
 console.log(indianGuitarAudio);
 
@@ -40,3 +41,14 @@ rwButton.addEventListener("click", function () {
 // indianGuitarAudio.stop() <-- this unfortunately doesnt work. COME ON JAVASCRIPT!!!
 // instead:
 // myAudio.pause(), myAudio.currentTime = 0
+
+// how to update an HTML element with the current time of the audio
+// https://stackoverflow.com/questions/4993097/html5-display-audio-currenttime
+// add an event listener to the audio itself
+indianGuitarAudio.addEventListener("timeupdate", function () {
+  console.log("change"); //see me in the console.
+  const theTime = Math.floor(indianGuitarAudio.currentTime);
+  currentTimePTag.textContent = `Current Time: ${theTime}/${Math.floor(
+    indianGuitarAudio.duration
+  )}`;
+});

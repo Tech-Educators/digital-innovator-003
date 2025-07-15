@@ -1,0 +1,39 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lemonchiffon;
+}
+
+section {
+  background-color: darkorchid;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  border-radius: 25px;
+  max-width: fit-content;
+}
+
+button {
+  padding: 2rem;
+  background-color: orange;
+  border-radius: 25px;
+  border: 1px solid grey;
+  font-size: 1.25rem;
+  color: lemonchiffon;
+
+  box-shadow: 3px 3px 3px grey;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: orangered;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 3px black;
+}
