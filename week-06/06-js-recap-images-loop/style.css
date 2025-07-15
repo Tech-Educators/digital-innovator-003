@@ -1,6 +1,15 @@
-section {
+#books-container {
   background-color: aquamarine;
   display: flex;
-  flex-direction: column;
   gap: 3rem;
+
+  overflow: scroll;
+}
+
+#current-book img {
+  width: 100%;
+}
+
+.individual-book img:hover {
+  cursor: pointer;
 }

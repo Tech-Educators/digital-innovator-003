@@ -2,9 +2,15 @@ console.log("Lets get loopy");
 
 const ourBooks = [
   {
+    title: "Flat Stanley",
+    imgSource:
+      "https://d1lp72kdku3ux1.cloudfront.net/title_instance/839/medium/3546231.jpg",
+    imgAlt: "a fantastic childrens book",
+  },
+  {
     title: "Dilla Time - The Life And After Life",
     imgSource:
-      "https://parentotheca.com/wp-content/uploads/2021/04/IMG_0356-scaled.jpg",
+      "https://soundsoftheuniverse.com/img/cGdsVDdrWVo2U096bDRFaXAvNW1ndz09/71je-ual9bl.jpg",
     imgAlt: "an image of the book Dilla Time",
   },
   {
@@ -21,7 +27,7 @@ const ourBooks = [
   },
   {
     title: "Blood on the Streets: A-Z of Glasgow Crime",
-    imgSource: "https://m.media-amazon.com/images/I/612S0ew9bSL._SY466_.jpg",
+    imgSource: "https://m.media-amazon.com/images/I/61iWaYOnzPL._SL1000_.jpg",
     imgAlt: "A book by Robert Jeffrey about street crime in Glasgow",
   },
   {
@@ -32,8 +38,7 @@ const ourBooks = [
   },
   {
     title: "Confident Presenter",
-    imgSource:
-      "https://upload.wikimedia.org/wikipedia/en/6/6f/One_day_-_david_nicholls.jpg",
+    imgSource: "https://m.media-amazon.com/images/I/612S0ew9bSL._SY466_.jpg",
     imgAlt:
       "this is the image of the book Confident Presenter by Andrea Pacini",
   },
@@ -48,6 +53,9 @@ function DisplayStuff() {
     console.log(ourBooks[i]);
 
     // render the title onto the page
+    // create a container for this individual book
+    const myBookDiv = document.createElement("div");
+    myBookDiv.classList = "individual-book";
 
     // reference the HTML section
     const container = document.getElementById("books-container");
@@ -56,9 +64,41 @@ function DisplayStuff() {
     // make the textcontent of that h2 tag be the title of the current book
     myNewh2.textContent = ourBooks[i].title;
     // append that title to the page
-    container.appendChild(myNewh2);
+    myBookDiv.appendChild(myNewh2);
 
-    // NEXT UP: WHY?!
+    // create a new img element DEMIR
+
+    const aNewImage = document.createElement("img");
+    // make the src of the element the imgSource of the current book: Vinay
+
+    aNewImage.src = ourBooks[i].imgSource;
+    // similar for the img's alt - Marina
+    aNewImage.alt = ourBooks[i].imgAlt;
+    // also make the img's width attribute 200 teaky hehe
+    aNewImage.width = "200";
+
+    // the image needs an event listener so that it knows when a click happens
+    aNewImage.addEventListener("click", function () {
+      console.log("Image clicked");
+      // when the image is clicked, we want to add an image to the 'current-book' secton on the page.
+      const NewCurrentImage = document.createElement("img");
+      NewCurrentImage.src = ourBooks[i].imgSource;
+      NewCurrentImage.alt = ourBooks[i].imgAlt;
+
+      const currentBookSection = document.getElementById("current-book");
+      currentBookSection.innerHTML = "";
+      currentBookSection.appendChild(NewCurrentImage);
+
+      // The following code we tried, but it had some strange behaviour!
+      // const currentBookSection = document.getElementById("current-book");
+      // currentBookSection.appendChild(aNewImage);
+    });
+
+    // then we need to append the image to the container
+    myBookDiv.appendChild(aNewImage);
+
+    // this adds our new book div to the section on the HTML
+    container.appendChild(myBookDiv);
     // the loop ends on the next line
   }
 
