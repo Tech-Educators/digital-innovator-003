@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms!</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Formy Magic</h1>
+
+    <!-- what is the the html element to make a form? -->
+    <form id="my-excellent-form">
+      <!-- The labls 'for' is linked to the inputs 'id' -->
+      <label for="firstName"
+        >Your First Name:
+        <input
+          type="text"
+          placeholder="Enter your name"
+          name="firstName"
+          id="firstName"
+          required
+      /></label>
+
+      <label for="lastName">Your Last Name: </label>
+      <input
+        type="text"
+        placeholder="last name"
+        id="lastName"
+        name="lastName"
+        required
+      />
+
+      <label for="carMiles"
+        >How many miles has your car done?:<input
+          type="number"
+          min="0"
+          max="1000000"
+          name="carMiles"
+          id="carMiles"
+          placeholder="Tell me your mileage"
+        />
+      </label>
+
+      <label for="password"
+        >Password<input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="your very secret pw here"
+      /></label>
+
+      <input type="submit" value="Send your details" />
+    </form>
+    <!-- label, input, textarea, button -->
+  </body>
+</html>

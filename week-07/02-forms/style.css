@@ -1,0 +1,15 @@
+body {
+  background-color: lemonchiffon;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-inline: auto;
+  max-width: 300px;
+}
+
+label {
+  margin-bottom: 1rem;
+}
