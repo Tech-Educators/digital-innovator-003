@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules</title>
+    <style>
+      body {
+        background-color: aqua;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <!--  this is kind of messy, and it blends our code.
+       -->
+    <script>
+      console.log("I am in the HTML");
+    </script>
+    <!--  which is why we create separate files for CSS and JS, to 'separate our concerns' -->
+    <script src="app.js" defer type="module"></script>
+  </head>
+  <body>
+    <h1 id="page-h1">Modules, Imports and Exports</h1>
+    <p>Oh my word, so much cool stuff!!</p>
+
+    <p id="page-counter">Count:</p>
+    <button id="counter-button">Click me for +1</button>
+  </body>
+</html>
