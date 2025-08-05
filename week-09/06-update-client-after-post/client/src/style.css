@@ -1,0 +1,17 @@
+body {
+  background-color: lemonchiffon;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  margin-left: 1rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100px;
+}
