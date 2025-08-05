@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <h1>Oooooo look at my fancy books form and results</h1>
+    <form id="user-book-entry-form">
+      <!-- title, img_source, img_alt, author, release_year -->
+      <label for="user-title"
+        >Book title here:
+        <input
+          type="text"
+          placeholder="Your book title"
+          name="userTitle"
+          id="user-title"
+          required
+        />
+      </label>
+      <label for="user-img-src"
+        >Your image source (full url, with extension):
+        <input
+          type="text"
+          placeholder="Your books img source"
+          name="userImgSrc"
+          id="user-img-src"
+          required
+        />
+      </label>
+      <label for="user-img-alt"
+        >Your images alt text:
+        <input
+          type="text"
+          placeholder="Your books img alt"
+          name="userImgAlt"
+          id="user-img-alt"
+          required
+        />
+      </label>
+      <label for="user-author"
+        >The Author:
+        <input
+          type="text"
+          placeholder="Your books author"
+          name="userAuthor"
+          id="user-author"
+          required
+        />
+      </label>
+      <label for="user-release-year"
+        >Release Year:
+        <input
+          type="number"
+          min="0"
+          max="9999"
+          placeholder="Your books release year"
+          name="userReleaseYear"
+          id="user-release-year"
+          required
+        />
+      </label>
+
+      <!-- <input type="submit" value="No, Submit me!" /> -->
+      <button type="submit">Submit me</button>
+    </form>
+  </body>
+</html>
